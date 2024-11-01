@@ -1,5 +1,3 @@
-Your README looks great as a foundational document for your CNN Image Classifier project! Below is a refined version that enhances clarity, professionalism, and organization. I’ve added sections for contributing and a license, improved phrasing, and made formatting consistent.
-
 ---
 
 # CNN Image Classifier
