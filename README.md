@@ -37,17 +37,12 @@ Follow these steps to set up the project on your local machine:
    pip install -r requirements.txt
    ```
 
-3. **Prepare the Model**: Save your trained CNN model in the project directory or specify its path in `app.py`.
+3. **Prepare the Model**: Save your trained CNN model in the project directory .
 
 4. **Start the FastAPI Server**:
-   ```bash
-   uvicorn app:app --reload
-   ```
 
 5. **Run the Streamlit App**:
-   ```bash
-   streamlit run streamlit_app.py
-   ```
+
 
 ## Usage
 
