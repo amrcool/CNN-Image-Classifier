@@ -1,0 +1,22 @@
+# requirements.txt
+
+# Python version
+python>=3.8
+
+# Deep learning framework
+tensorflow
+
+# Image processing library
+opencv-python
+
+# Web framework
+fastapi
+
+# ASGI server for FastAPI
+uvicorn
+
+# Web application framework for data apps
+streamlit
+
+# HTTP library for making requests
+requests
