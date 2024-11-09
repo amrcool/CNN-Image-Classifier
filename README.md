@@ -6,9 +6,9 @@ This project implements a Convolutional Neural Network (CNN) image classifier us
 
 ## Features
 
-- **Deep Learning Model**: A CNN model trained on a comprehensive image dataset for accurate classification.
-- **FastAPI Backend**: Offers a RESTful API endpoint for efficient image prediction.
-- **Streamlit Frontend**: Provides a user-friendly interface for real-time image uploads and predictions.
+- **Deep Learning Model**: A CNN model trained on an image dataset for accurate classification.
+- **FastAPI Backend**: Provides a RESTful API endpoint for image prediction.
+- **Streamlit Frontend**: A user-friendly interface for real-time image uploads and predictions.
 
 ## Requirements
 
@@ -33,16 +33,29 @@ Follow these steps to set up the project on your local machine:
    ```
 
 2. **Install the Dependencies**:
+   Create a virtual environment and install the required dependencies:
    ```bash
+   python -m venv .myenv
+   source .myenv/bin/activate  # On Windows, use .myenv\Scripts\activate
    pip install -r requirements.txt
    ```
 
-3. **Prepare the Model**: Save your trained CNN model in the project directory .
+3. **Prepare the Model**:
+   Save your trained CNN model in the project directory as `cnn_model.keras`. You can replace this with your own trained model if necessary.
 
 4. **Start the FastAPI Server**:
+   In the project directory, run the FastAPI server using Uvicorn:
+   ```bash
+   uvicorn app:app --reload
+   ```
+   This will start the FastAPI server on `http://127.0.0.1:8000`.
 
 5. **Run the Streamlit App**:
-
+   In a new terminal window, run the Streamlit app:
+   ```bash
+   streamlit run app.py
+   ```
+   This will start the Streamlit app on `http://localhost:8501`.
 
 ## Usage
 
@@ -58,9 +71,29 @@ Follow these steps to set up the project on your local machine:
 - **Request**: Multipart form-data with the image file under the key `file`.
 - **Response**: A JSON object containing the `predicted_class`.
 
+### Example Request (using `curl`):
+```bash
+curl -X 'POST' \
+  'http://127.0.0.1:8000/predict' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: multipart/form-data' \
+  -F 'file=@your_image.jpg'
+```
+
+### Example Response:
+```json
+{
+  "predicted_class": 3
+}
+```
+
+## Notes
+
+- Make sure the FastAPI server is running before using the Streamlit app, as Streamlit will communicate with the FastAPI server to get predictions.
+- If you need to use your own trained model, ensure it is saved as a `.keras` file and placed in the project directory.
+
 ## Example
 
 Run both the FastAPI and Streamlit servers, upload an image through the Streamlit UI, and observe the classification results.
-
 
 ---
