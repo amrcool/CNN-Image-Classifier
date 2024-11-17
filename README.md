@@ -1,4 +1,4 @@
----
+
 
 # 🌟 CNN Image Classifier 🌟  
 
@@ -8,7 +8,7 @@ This project implements a **Convolutional Neural Network (CNN)** image classifie
 
 ---
 
-## ✨ Features 
+## ✨ Features  
 
 ✔️ **Deep Learning Model**: A CNN model trained on an image dataset for accurate classification.  
 ✔️ **FastAPI Backend**: Provides a RESTful API endpoint for image prediction.  
@@ -120,5 +120,3 @@ curl -X 'POST' \
 ## 📦 Example  
 
 Run the **FastAPI server** and the **Streamlit frontend** locally, upload an image via the Streamlit UI, and observe the classification results!  
-
----
